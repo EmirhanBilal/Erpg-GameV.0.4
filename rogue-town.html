@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogue Town</title>
+
+    <link rel="stylesheet" href="app.css" />
+    <style>
+      #conteiner {
+        width: 1220px;
+        height: 820px;
+        background-image: url(Photos/Town/hunter-town.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #rogue-town-container {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+      }
+      #rogue-container {
+        text-align: center;
+        margin-top: 290px;
+        margin-right: 90px;
+      }
+      #rogue-image {
+        width: 200px;
+        height: 380px;
+      }
+      #rogue-container p {
+        font-weight: bold;
+        color: rgb(233, 247, 234);
+      }
+      .name-level {
+        display: inline-block;
+      }
+      #character-name {
+        background-color: rgb(104, 109, 97);
+        color: black;
+        padding: 10px 10px;
+        font-size: 25px;
+        width: 130px;
+        font-weight: 500;
+      }
+      #character-level-class {
+        background-color: darkred;
+        color: rgb(185, 166, 166);
+        padding: 10px 10px;
+        font-size: 25px;
+        width: 200px;
+      }
+      #character-information {
+        border: 8px solid #854e0e;
+        background-color: #fef08ad0;
+        border-radius: 10px;
+        width: 370px;
+        height: 520px;
+      }
+      .exp {
+        background-color: #fdff00;
+        color: rgb(15, 15, 15);
+        padding: 5px 10px;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .item-bar {
+        display: inline-block;
+        border: 5px solid rgb(27, 27, 27);
+        width: 110px;
+        height: 80px;
+        background-color: #47556944;
+        margin-top: 3px;
+      }
+
+      #activation-container {
+        height: 200px;
+        display: inline-block;
+      }
+
+      #fight:hover {
+        background-color: darkred;
+      }
+      #fight a {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 60px;
+        width: 100px;
+        background-color: red;
+        padding: 8px 16px;
+      }
+      .position-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      span {
+        font-size: 25px;
+        color: rgb(185, 166, 166);
+      }
+      .item-img {
+        width: 110px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <audio
+    id="mage-town-music"
+    src="voices/town-music/rogue-town.wav"
+    autoplay
+  ></audio>
+  <body onload="paste_town_name()">
+    <div id="conteiner">
+      <h1 style="text-align: center; margin-top: 15px; font-size: 40px">
+        TOWN
+      </h1>
+      <div id="rogue-town-container">
+        <div class="position-left">
+          <div id="character-information">
+            <div style="display: flex">
+              <div class="name-level" id="character-name">Emiran</div>
+              <div class="name-level" id="character-level-class">
+                <span id="level">Level 1</span>-ROGUE
+              </div>
+            </div>
+            <div class="exp">EXP</div>
+            <div style="display: flex; align-items: center">
+              <img
+                src="Photos/small-img/coin-image.png"
+                style="width: 80px; height: 68px"
+                alt=""
+              />
+              <h3 id="coin" style="margin-bottom: 0">0</h3>
+            </div>
+            <div style="height: 3px; background-color: black"></div>
+            <div>
+              <h3 style="font-weight: 600">ITEMS</h3>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-1"
+                  src=" "
+                  alt=""
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-2"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-3"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-4"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-5"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-6"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-7"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-8"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+              <div class="item-bar">
+                <img
+                  class="item-img"
+                  id="item-9"
+                  src=" "
+                  onerror="imgError(this);"
+                />
+              </div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <a onclick="reset_coins()" href="rogue-page.html" id="back-link"
+              ><img
+                src="Photos/back homepage.png"
+                alt="back-home-page"
+                id="back"
+              />
+            </a>
+            <div><button id="fight">Fight</button></div>
+          </div>
+        </div>
+
+        <div id="rogue-container">
+          <img
+            id="rogue-image"
+            src="Photos/266-2663387_rogue-final-ronin-rpg-class.png"
+            alt="Rogue"
+          />
+          <p id="player">Name: Emiran</p>
+          <p>Level: 1</p>
+        </div>
+      </div>
+      <div id="chapters" style="display: none">
+        <a href="level-1-area.html"
+          ><div class="div-level>">
+            <button id="level-btn1" onclick="send_name()">Level 1</button>
+          </div></a
+        >
+        <div class="div-level>"><button>Level 2</button></div>
+        <div class="div-level>"><button>Level 3</button></div>
+        <div class="div-level>"><button>Level 4</button></div>
+        <div class="div-level>"><button>Level 5</button></div>
+        <div class="div-level>"><button>Level 6</button></div>
+        <div class="div-level>"><button>Level 7</button></div>
+        <div class="div-level>"><button>Level 8</button></div>
+        <div class="div-level>"><button>Level 9</button></div>
+        <div class="div-level>"><button>Level 10</button></div>
+        <div class="div-level>"><button>Level 11</button></div>
+        <div class="div-level>"><button>Level 12</button></div>
+        <div class="div-level>"><button>Level 13</button></div>
+        <div class="div-level>"><button>Level 14</button></div>
+        <div class="div-level>"><button>Level 15</button></div>
+        <button id="close-level-page">X</button>
+      </div>
+    </div>
+
+    <script src="indx.js"></script>
+    <script src="asd.js"></script>
+    <script>
+      var audio = document.getElementById("mage-town-music");
+      audio.volume = 0.5;
+    </script>
+  </body>
+</html>
