@@ -38,6 +38,7 @@ function character_spec() {
         specCharacter = sessionStorage.getItem("specCharacter")
     }
     sessionStorage.setItem("totalCoin",0)
+    sessionStorage.setItem("slime-sword",null)
 }
 function load_for_spec(){
     if (sessionStorage.getItem("specCharacter") === "warrior") {
